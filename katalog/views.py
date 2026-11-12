@@ -94,3 +94,12 @@ def api_manhwa_list(request):
         'items': items,
         'count': len(items),
     })
+
+
+def api_manhwa_detail(request, pk):
+    try:
+        # pobranie pojedynczego rekordu przez get()
+        item = Manhwa.objects.get(pk=pk)
+        return JsonResponse({'item': serialize_manhwa(item)})
+    except Manhwa.DoesNotExist:
+        return JsonResponse({'error': 'Nie znaleziono rekordu o podanym ID.'}, status=404)

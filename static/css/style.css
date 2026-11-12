@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Katalog Manhw i Komiksów - Style CSS
-   Autor: Jan Zaborowski (31401, gr 1)
-   Laboratorium: Django API + JavaScript fetch()
-   ========================================================================== */
+/* Style arkusza katalogu manhw */
 
 :root {
     --bg-base: #0f111a;
@@ -171,8 +167,8 @@ body {
 
 .controls-form {
     display: grid;
-    grid-template-columns: 1.2fr 1fr auto;
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
     align-items: end;
 }
 
@@ -450,6 +446,29 @@ body {
     background: rgba(245, 158, 11, 0.18);
     color: #fcd34d;
     border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tag-publisher {
+    background: rgba(139, 92, 246, 0.18);
+    color: #ddd6fe;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.tag-reading {
+    background: rgba(56, 189, 248, 0.16);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.card-notes {
+    color: #94a3b8;
+    font-size: 0.84rem;
+    font-style: italic;
+    background: rgba(15, 17, 26, 0.45);
+    border-left: 3px solid var(--primary);
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
 }
 
 .card-title {
